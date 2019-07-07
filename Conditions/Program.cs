@@ -7,7 +7,6 @@ namespace Conditions
         static void Main(string[] args)
         {
             //2
-
             double operand1 = 15;
             double operand2 = 0;
             double result;
@@ -31,28 +30,19 @@ namespace Conditions
                     Console.WriteLine("operand1 {0} operand2 = {1:#.###}", sign, result);
                     break;
                 case "/":
-                    if (operand2 == 0)
-                    {
-                        Console.WriteLine("Division by zero!");
-                        break;
-                    }
-                    else
-                    {
-                        result = operand1 / operand2;
-                        Console.WriteLine("operand1 {0} operand2 = {1:#.###}", sign, result);
-                        break;
-                    }
+                    result = operand2 == 0 ? Double.NaN : operand1 / operand2;
+                    Console.WriteLine("operand1 {0} operand2 = {1:#.###}", sign, result);
+                    break;
                 default:
                     Console.WriteLine("You entered a non-existing sign");
                     break;
             }
 
             //3
-
             Console.WriteLine("Enter a number between 0 and 100:");
 
-            string temp = Console.ReadLine();
-            int number = Convert.ToInt32(temp);
+            string userInput = Console.ReadLine();
+            int number = Convert.ToInt32(userInput);
 
             if (0 <= number && number <= 14)
                 Console.WriteLine("the number is between 0 and 14");
@@ -66,7 +56,6 @@ namespace Conditions
                 Console.WriteLine("The number is not between 0 and 100");
 
             //4(additional task)
-
             Console.WriteLine("Enter a word about the weather in Russian:");
 
             string word = Console.ReadLine();
