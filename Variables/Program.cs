@@ -25,7 +25,7 @@ namespace Variables
             int a = 6, b = 7, c = 10;
             double average;
             //Need sum to float(double) for best result
-            average = (float)(a + b + c) / 3;
+            average = (double)(a + b + c) / 3;
             Console.WriteLine("average = {0:#.##}", average);
 
             //3
