@@ -23,13 +23,13 @@ namespace Variables
 
             //2
             int a = 6, b = 7, c = 10;
-            float average;
+            double average;
             //Need sum to float(double) for best result
             average = (float)(a + b + c) / 3;
             Console.WriteLine("average = {0:#.##}", average);
 
             //3
-            double pi = Math.PI;
+            const double pi = Math.PI;
             int r = 5;
             double square;
             square = pi * Math.Pow(r, 2);
@@ -51,16 +51,6 @@ namespace Variables
             int \u006fIdentifier;
             //int &myVar;
             int myVariab1le;//It is impossible
-
-            //6
-            //Operators
-            https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/operators
-
-            //Cast and Type Conversion
-            //https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/casting-and-type-conversions
-
-            //Math.PI Field
-            https://docs.microsoft.com/en-us/dotnet/api/system.math.pi?view=netframework-4.8
 
             //To prevent the console from closing
             Console.ReadLine();
