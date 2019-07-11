@@ -7,12 +7,12 @@ namespace Methods2
         static void Main(string[] args)
         {
             //2
-            int debt = 700;
+            double debt = 700;
             Console.WriteLine("Your current debt is {0:#}", debt);
             Console.WriteLine("Enter sum to pay off debt: ");
-            int money = Int32.Parse(Console.ReadLine());
+            double money = Int32.Parse(Console.ReadLine());
 
-            Amortization(money, ref debt);
+            GetAmortization(money, ref debt);
 
             //3
             //recursive calls are slower than iterative calls.
@@ -45,11 +45,11 @@ namespace Methods2
                     Console.WriteLine("{0} ^ {1} = {2:G}", operand1, operand2, result);
                     break;
                 case "c":
-                    result = Concatenation(operand1, operand2);
+                    result = Concatenate(operand1, operand2);
                     Console.WriteLine("{0} + {1} = {2:#}", operand1, operand2, result);
                     break;
                 case "d":
-                    result = Division(operand1, operand2);
+                    result = Divide(operand1, operand2);
                     Console.WriteLine("{0} / {1} = {2:G}", operand1, operand2, result);
                     break;
                 default:
@@ -68,7 +68,7 @@ namespace Methods2
             Console.ReadLine();
         }
 
-        private static void Amortization(int sum, ref int debt)
+        private static void GetAmortization(double sum, ref double debt)
         {
             debt -= sum;
 
@@ -103,14 +103,14 @@ namespace Methods2
             return res;
         }
 
-        private static int Concatenation(int a, int b)
+        private static int Concatenate(int a, int b)
         {
             string str = a.ToString() + b.ToString();
             int ab = Int32.Parse(str);
             return ab;
         }
 
-        private static int Division(int a, int b)
+        private static int Divide(int a, int b)
         {
             if (b == 0)
             {
