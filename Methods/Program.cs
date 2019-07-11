@@ -4,58 +4,7 @@ namespace Methods
 {
     class Program
     {
-        static double Add(double a, double b)
-        {
-            return a + b;
-        }
-        static double Sub(double a, double b)
-        {
-            return a - b;
-        }
-        static double Mul(double a, double b)
-        {
-            return a * b;
-        }
-        static double Div(double a, double b)
-        {
-            if (b == 0)
-            {
-                Console.WriteLine("Division by zero");
-                return Double.NaN;
-            }
-            return a / b;
-        }
-        static double MoneyConversion(double m, double r)
-        {
-            return m / r;
-        }
-        static bool IsPositive(int p)
-        {
-            return p >= 0;
-        }
-        static bool IsPrime(int p)
-        {
-            for (int i = 2; i < Math.Sqrt(p); ++i)
-            {
-                if (p % i == 0)
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
-        static bool IsDivided(int p)
-        {
-            if (p % 2 == 0 || p % 5 == 0 || p % 3 == 0 || p % 6 == 0 || p % 9 == 0)
-                return true;
-            else
-                return false;
-        }
-        static void Calculate(int a, int b, int c)
-        {
-            int average = (a + b + c) / 3;
-            Console.WriteLine("Average of {0} {1} {2} is {3}", a, b, c, average);
-        }
+
         static void Main(string[] args)
         {
             //2
@@ -123,6 +72,68 @@ namespace Methods
             Calculate(3, 7, 5);
 
             Console.ReadLine();
+        }
+
+        private static double Add(double a, double b)
+        {
+            return a + b;
+        }
+
+        private static double Sub(double a, double b)
+        {
+            return a - b;
+        }
+
+        private static double Mul(double a, double b)
+        {
+            return a * b;
+        }
+
+        private static double Div(double a, double b)
+        {
+            if (b == 0)
+            {
+                Console.WriteLine("Division by zero");
+                return Double.NaN;
+            }
+            return a / b;
+        }
+
+        private static double MoneyConversion(double money, double rate)
+        {
+            return money / rate;
+        }
+
+        private static bool IsPositive(int number)
+        {
+            return number >= 0;
+        }
+
+        private static bool IsPrime(int number)
+        {
+            for (int i = 2; i < Math.Sqrt(number); ++i)
+            {
+                if (number % i == 0)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private static bool IsDivided(int number)
+        {
+            if (number % 2 == 0 || number % 5 == 0 || number % 3 == 0 ||
+                number % 6 == 0 || number % 9 == 0)
+                return true;
+            else
+                return false;
+        }
+
+        private static void Calculate(int a, int b, int c)
+        {
+            int average = (a + b + c) / 3;
+            Console.WriteLine("Average of {0} {1} {2} is {3}", a, b, c, average);
         }
     }
 }
